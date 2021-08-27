@@ -25,3 +25,15 @@
 # 2
 # Выходные данные-2:
 # 0
+
+height = 20  # высота дома
+floor = 14  # этаж Коли
+after_how_many_floors = 9  # через сколько этажей останавливается лифт
+
+price_one_floor_up = 200  # rub
+price_one_floor_down = 100  # rub
+
+price_floors_up = (height - 1) % after_how_many_floors
+price_floors_down = after_how_many_floors - price_floors_up
+
+print(min(price_one_floor_up * price_floors_up, price_one_floor_down * price_floors_down))
